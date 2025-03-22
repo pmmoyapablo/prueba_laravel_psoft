@@ -10,7 +10,7 @@
 ## Instrucciones para Arrancar esta Aplicación
 
 - Version de PHP 7
-- Crear una BD denominada "estion_empresas" en el Servidor MySQL
+- Crear una BD denominada "gestion_empresas" en el Servidor MySQL
 - Colocar los datos de connexion a BD en el archivo .env a crear:
 
 DB_CONNECTION=mysql
