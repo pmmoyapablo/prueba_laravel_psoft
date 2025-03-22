@@ -11,7 +11,7 @@
         <form action="{{ route('empresas.index') }}" method="GET">
             <div class="row">
                 <div class="col-md-4">
-                    <input type="text" class="form-control" name="id_empresa" placeholder="Buscar por ID">
+                    <input type="text" class="form-control" name="id" placeholder="Buscar por ID">
                 </div>
                 <div class="col-md-4">
                     <input type="text" class="form-control" name="razon_social" placeholder="Buscar por Razón Social">
@@ -47,16 +47,16 @@
             </tr>
             @foreach ($empresas as $empresa)
                 <tr>
-                    <td>{{ $empresa->id_empresa }}</td>
+                    <td>{{ $empresa->id }}</td>
                     <td>{{ $empresa->rif }}</td>
                     <td>{{ $empresa->razon_social }}</td>
                     <td>{{ $empresa->direccion }}</td>
                     <td>{{ $empresa->telefono }}</td>
                     <td>{{ $empresa->fecha_creacion }}</td>
                     <td>
-                        <a class="btn btn-info" href="{{ route('empresas.show',$empresa->id_empresa) }}">Ver</a>
-                        <a class="btn btn-primary" href="{{ route('empresas.edit',$empresa->id_empresa) }}">Editar</a>
-                        <form action="{{ route('empresas.destroy',$empresa->id_empresa) }}" method="POST" style="display: inline-block;">
+                        <a class="btn btn-info" href="{{ route('empresas.show',$empresa->id) }}">Ver</a>
+                        <a class="btn btn-primary" href="{{ route('empresas.edit',$empresa->id) }}">Editar</a>
+                        <form action="{{ route('empresas.destroy',$empresa->id) }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de eliminar?')">Eliminar</button>
